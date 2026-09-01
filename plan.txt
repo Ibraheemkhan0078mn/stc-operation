@@ -1,0 +1,7 @@
+
+
+1: login and registration but role base + password hash
+2: member (crud)
+3: project (internally task => member)  => calculations with dates
+4: member attendance
+5: ai integration which tells us that which work is perfect fo rwhihc member.
