@@ -3,6 +3,7 @@ import authModel from '../models/auth.model.js'
 let router = express.Router()
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
+import dbConnection from '../db/dbConnection.js'
 
 
 
@@ -11,7 +12,9 @@ import jwt from 'jsonwebtoken'
 
 
 router.post("/registration", async (req, res) => {
+    dbConnection()
     let dataObj = req.body
+
 
     let existingData = await authModel.findOne({ email: dataObj.email })
     if (existingData) {
